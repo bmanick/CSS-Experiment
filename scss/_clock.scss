@@ -39,6 +39,7 @@ $clock-width: 130px;
 
 .slice {
   background-color: #1abc9c;
+  cursor: pointer;
   position: absolute;
   width: $clock-width;
   height: $clock-height;
@@ -46,6 +47,10 @@ $clock-width: 130px;
   @include border-radius($clock-width 0 0 $clock-width);
   @include setOrigin(right center);
   @include transition(0.1s);
+
+  &:hover{
+    background-color: darken(#1abc9c, 10%);
+  }
 }
 
 .rotate-0{
