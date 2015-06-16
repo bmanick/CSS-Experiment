@@ -1,0 +1,191 @@
+$clock-height: 260px;
+$clock-width: 130px;
+
+.clock{
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;  
+}
+
+.right-clock{
+  height: 280px;
+  left: 150px;
+  overflow: hidden;
+  position: absolute;
+  width: 180px;
+
+  .clock-piece{
+    left: 0;
+  }
+}
+
+.clock-piece {
+  position: absolute;
+  width: $clock-width;
+  height: $clock-height;
+  overflow: hidden;
+  left: 150px;
+  @include setOrigin(left center);
+
+  span{
+    line-height: 1;
+    position: absolute;
+    left: 50%;
+  }
+}
+
+.slice {
+  background-color: #1abc9c;
+  position: absolute;
+  width: $clock-width;
+  height: $clock-height;
+  left: -130px;
+  @include border-radius($clock-width 0 0 $clock-width);
+  @include setOrigin(right center);
+  @include transition(0.1s);
+}
+
+.rotate-0{
+  @include rotate(1deg);
+
+   .slice{
+    @include rotate(29deg);    
+  }
+}
+
+.rotate-1{
+  @include rotate(31deg);
+
+  span{
+    @include rotate(-31deg);
+  }
+
+   .slice{
+    @include rotate(29deg);
+  }
+}
+
+.rotate-2{
+  @include rotate(61deg);
+
+  span{
+    @include rotate(-61deg);
+  }
+
+   .slice{
+    @include rotate(29deg);
+  }
+}
+
+.rotate-3{
+  @include rotate(91deg);
+
+  span{
+    @include rotate(-91deg);
+  }
+
+   .slice{
+    @include rotate(29deg);    
+  }
+}
+
+.rotate-4{
+  @include rotate(121deg);
+
+  span{
+    @include rotate(-121deg);
+  }
+
+   .slice{
+    @include rotate(29deg);
+  }
+}
+
+.rotate-5{
+  @include rotate(151deg);
+
+  span{
+    @include rotate(-151deg);
+    margin-left: -9px;
+    padding-top: 10px;
+  }
+
+   .slice{
+    @include rotate(29deg);
+  }
+}
+
+.rotate-6{
+  @include rotate(181deg);
+
+  span{
+    @include rotate(-181deg);
+  }
+
+   .slice{
+    @include rotate(29deg);
+  }
+}
+
+.rotate-7{
+  @include rotate(211deg);
+
+  span{
+    @include rotate(-211deg);
+  }
+
+   .slice{
+    @include rotate(29deg);
+  }
+}
+
+.rotate-8{
+  @include rotate(241deg);
+
+  span{
+    @include rotate(-241deg);
+  }
+
+   .slice{
+    @include rotate(29deg);
+  }
+}
+
+.rotate-9{
+  @include rotate(271deg);
+
+  span{
+    @include rotate(-271deg);
+  }
+
+   .slice{
+    @include rotate(29deg);
+  }
+}
+
+.rotate-10{
+  @include rotate(301deg);
+
+  span{
+    @include rotate(-301deg);
+  }
+
+   .slice{
+    @include rotate(29deg);
+  }
+}
+
+.rotate-11{
+  @include rotate(331deg);
+
+  span{
+    @include rotate(-331deg);
+  }
+
+   .slice{
+    @include rotate(29deg);
+  }
+}
